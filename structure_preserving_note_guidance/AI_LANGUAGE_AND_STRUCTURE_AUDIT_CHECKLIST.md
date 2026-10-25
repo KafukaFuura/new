@@ -1,6 +1,6 @@
 # AI-LANGUAGE AND STRUCTURE AUDIT CHECKLIST
 
-Read together with AI_HANDOFF_MANUSCRIPT_STYLE_AND_STRUCTURE.md.
+Read together with AI_HANDOFF_MANUSCRIPT_STYLE_AND_STRUCTURE.md and AI_HANDOFF_ADDENDUM_NOTATION_AND_CURRENT_STATUS.md.
 
 ## A. Adviser-explicit language flags
 
@@ -166,3 +166,66 @@ Priority:
 7. only then generate new prose.
 
 After any structural rewrite, re-run all language checks because better structure must not reintroduce AI-like prose.
+
+## K. Programming-style intermediate-variable audit
+
+For every newly introduced intermediate symbol or named quantity, ask:
+
+- Does this expose a real mathematical structure?
+- Is it reused often enough to justify reader memory?
+- Does it shorten a genuinely complicated expression?
+- Is it needed in a theorem, algorithm, or long proof dependency?
+- Could the original expression be used directly?
+- Would an equation number and direct cross-reference be clearer than a new name?
+
+Warning sign:
+
+> The mathematics is conceptually A+B+C, but the prose first defines D=A+B and later works with D+C only because this resembles a program with temporary variables.
+
+Remove coding-style temporary registers. Retain notation that clarifies conservation, positivity, energy, well-balancedness, operator structure, or repeated dependencies.
+
+## L. Anti-overcorrection audit
+
+Do not turn notation economy into notation minimalism.
+
+Before deleting notation or explanation, check comparable passages in the 15+1 reference corpus:
+
+- the core Wu/Shu and related papers previously supplied;
+- ChenWu_JCP2022.pdf for method-first structure.
+
+Retain an intermediate object when experienced authors would use it to expose a structural identity, state a theorem clearly, or avoid repeating a genuinely complicated formula.
+
+The target is proportionality:
+
+- important step: explain;
+- routine step: compress;
+- essential notation: retain;
+- temporary coding-style notation: remove.
+
+## M. Reference-evidence classification
+
+When justifying a revision, distinguish:
+
+1. direct lexical evidence;
+2. analogous organizational evidence;
+3. editorial inference informed by the references.
+
+Do not present editorial inference as a phrase directly attested in the source papers.
+
+A word appearing in a reference paper is not automatically the best choice in the current context. Check both authenticity and local precision.
+
+## N. SAV-specific language audit
+
+For substantive SAV history or claims:
+
+1. prefer Shen and collaborators' own wording and framing;
+2. use neutral functional prose only for local connections;
+3. if a necessary substantive sentence has no source analogue and is not neutral, discuss it before inserting it.
+
+Avoid regenerating a polished template literature review after structural edits.
+
+## O. Current-status safeguards
+
+- Sections 3 and 4 received a localized sentence-level audit, but boundary terminology and limiter-dependent passages remain nonfinal.
+- The limiter mathematics is under separate review. Do not treat the current limiter formulas or proofs as permanent until the user confirms the replacement.
+- Any limiter change requires rechecking positivity, pairwise conservation, energy identities, well-balancedness, multidimensional limiting, fully discrete stage conditions, and the algorithmic summary.
